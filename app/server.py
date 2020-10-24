@@ -17,10 +17,10 @@ def fibo(nterms):
 app = Flask(__name__)
 @app.route('/')
 def home():
+    return render_template('index.html')
+@app.route('/result')
+def result():
     #print(fiboSeries)
-    showResult()
-    redirects +1
-    print(redirects)
     return render_template('index.html',numbers=fiboSeries)
 
 @app.route('/fibonacci', methods=['POST','GET'])
@@ -30,7 +30,4 @@ def showResult():
         c = int(no_of_terms)
         fibo(c)
         print(fiboSeries)
-        global redirects 
-        redirects = 0
-        redirects +1
-        return redirect('/')
+        return redirect('/result')
