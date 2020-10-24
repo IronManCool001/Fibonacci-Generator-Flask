@@ -11,7 +11,7 @@ def fibo(nterms):
             nextElement = fiboSeries[i-1] + fiboSeries[i-2]
             fiboSeries.append(nextElement)
     else:
-        fiboSeries=[]
+        fiboSeries=['0','1']
 
 
 app = Flask(__name__)
