@@ -18,16 +18,14 @@
 <body>
     <center>
         {% block content %}
-        <form action="/fibonacci" method="POST">
-        <label for="question">How many Fibonacci Number do you want</label>
+        <h2>The fibonacci sequence is: </h2>
+        {% for numb in numbers %}
+        <strong style="font-size:20px;">{{numb}}</strong>
+        {% endfor %}
         <br>
         <br>
-        <input type="number" name="numbterms" id="n" class="form-group" id=""exampleInputEmail1">
-        <br>
-        <br>
-        <input type="submit" value="getnumbers" class="btn btn-outline-info">
-        </form>
-        {%endblock content %}
+        <a href="/" class="btn btn-primary">Back to main page</a>
+        {%endblock%}
     </center>
 </body>
 </html>

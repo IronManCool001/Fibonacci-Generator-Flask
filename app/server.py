@@ -18,10 +18,11 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html')
+
 @app.route('/result')
 def result():
     #print(fiboSeries)
-    return render_template('index.html',numbers=fiboSeries)
+    return render_template('result.html',numbers=fiboSeries)
 
 @app.route('/fibonacci', methods=['POST','GET'])
 def showResult():
